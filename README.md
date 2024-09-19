@@ -1,0 +1,1 @@
+Para fazer funcionar, primeiro copie os links dos paths dos videos para dentro do codigo juntamente com o path do icone da Netflix "Netflixbnt", Além disso copie o IP da sua maquina e mude com o do codigo.
