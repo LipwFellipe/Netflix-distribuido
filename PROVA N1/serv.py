@@ -1,13 +1,14 @@
 import socket
 
 CHUNK_SIZE = 4096
-net = r'D:\git\videos\Netflixbnt.png'
-filme1 = r"D:\git\videos\Filme1.mp4"
-filme2 = r"D:\git\videos\Filme2.mp4"
+net = r'videos\Netflixbnt.png'
+filme1 = r"videos\Filme1.mp4"
+filme2 = r"videos\Filme2.mp4"
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP
 server.bind(('192.168.1.4', 1234))
 server.listen(1)
+print("Server Iniciado")
 
 def enviar_net(client):
     with open(net, 'rb') as f:
@@ -24,7 +25,6 @@ def enviar_film2(client):
         while (chunk := f.read(CHUNK_SIZE)):
             client.send(chunk)
     client.shutdown(socket.SHUT_WR)
-
 while True:
     client, address = server.accept()
     print(f"Conexão de {address}")
