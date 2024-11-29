@@ -17,21 +17,15 @@ def Interface():
 
     root_tk.grid_columnconfigure(0, weight=1)
 
-    check_assistido = ctk.CTkCheckBox(root_tk, text="Assistido?", fg_color="#821D1A", hover_color="#3A3A3A", onvalue="assis", offvalue="nassis", command=lambda: Verificar(check_assistido))
-    check_assistido.grid(row=2, column=0, padx=20, pady=(0, 20), sticky="w")
-
     checkbox = ctk.CTkCheckBox(root_tk, text="Gostou do filme?", fg_color="#821D1A", hover_color="#3A3A3A", onvalue="sim", offvalue="não")
-    checkbox.grid(row=2, column=1, padx=20, pady=(0, 20), sticky="w")
+    checkbox.grid(row=2, column=0, padx=20, pady=(0, 20), sticky="w")
 
     # Seção num2 
     button2 = ctk.CTkButton(root_tk, text="FILME 2: O ESPAÇO SIDERAL", fg_color="#821D1A", hover_color="#3A3A3A", command=lambda: abrir_video(r"D:\Projetos VSCODE\Server Netflix\videos\Filme2.mp4"))
     button2.grid(row=3, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
 
-    checkbox_1 = ctk.CTkCheckBox(root_tk, text="Assistido?", fg_color="#821D1A", hover_color="#3A3A3A", onvalue="sim", offvalue="não")
-    checkbox_1.grid(row=4, column=0, padx=20, pady=(0, 20), sticky="w")
-
     checkbox_2 = ctk.CTkCheckBox(root_tk, text="Gostou do filme?", fg_color="#821D1A", hover_color="#3A3A3A", onvalue="sim", offvalue="não")
-    checkbox_2.grid(row=4, column=1, padx=20, pady=(0, 20), sticky="w")
+    checkbox_2.grid(row=4, column=0, padx=20, pady=(0, 20), sticky="w")
 
     # Imagem
     from PIL import Image
